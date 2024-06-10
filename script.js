@@ -12,6 +12,9 @@ const iconElement = document.getElementById("icon");
 const celsiusTempElement = document.getElementById("temp_c");
 const fahrenheitTempElement = document.getElementById("temp_f");
 
+//WEATHER-APP ELEMENT
+const weatherAppElement = document.querySelector(".weather-app");
+const weatherAppWrapper = document.querySelector(".weather-wrapper")
 async function getWeatherData(apiKey, locationSearched) {
     try {
         const response = await fetch(`https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${locationSearched.toLowerCase()}`);
@@ -48,6 +51,10 @@ searchButton.addEventListener("click", () => {
         getWeatherData(apiKey, location).then(data => {
             if (data) {
                 updateWeather(data);
+                weatherAppElement.classList.remove('hidden');
+                weatherAppElement.style.opacity= 1;
+                weatherAppWrapper.style.height= "60%";
+                weatherAppWrapper.style.maxHeight  = "500px";
             } else {
                 console.error("No data returned from API");
             }

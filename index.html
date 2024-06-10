@@ -9,15 +9,15 @@
 </head>
 <body>
     <div id="weather-wrapper">
-        <div>
-            <label for="location-input">Search Location:</label>
+        <div id="search-wrapper">
+            <label for="location-input"></label>
             <input type="text" id="location-input" placeholder="Enter location"></input>
-            <button id="search-button">Get Weather</button>
+            <button id="search-button">⌕</button>
         </div>
-        <div class="weather-app">
-            <h2 id="date">Monday, 27th April</h2>
-            <h2 id="time">6:27am</h2>
-            <h1 id="location">London</h1>
+        <div class="weather-app hidden">
+            <h2 id="date"></h2>
+            <h2 id="time"></h2>
+            <h1 id="location"></h1>
             <img id="icon" src="" alt="Weather Icon">
 
             <p><span id="temp_c"></span>°C / <span id="temp_f"></span>°F</p>

@@ -16,52 +16,27 @@ body {
 #weather-wrapper {
     width: 100%;
     max-width: 400px;
+
     background-color: #fff;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.search {
-    margin-bottom: 20px;
-    text-align: center;
-}
-
-.search label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-}
-
-.search input {
-    width: calc(100% - 110px);
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    outline: none;
-    display: inline-block;
-}
-
-.search button {
-    padding: 10px;
-    border: none;
-    background-color: #007bff;
-    color: white;
-    border-radius: 4px;
-    cursor: pointer;
-    display: inline-block;
-}
-
-.search button:hover {
-    background-color: #0056b3;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    align-items: stretch;
 }
 
 .weather-app {
+    margin-top: 50px;
     text-align: center;
+    opacity: 0;
+    transition: opacity 3s ease-in-out;
 }
 
 .weather-app h2, .weather-app h1 {
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 .weather-app img {
@@ -74,3 +49,54 @@ body {
     font-size: 1.2em;
     margin-top: 10px;
 }
+
+.hidden {
+    display: none;
+}
+
+#search-wrapper{
+    display: inline-block;
+}
+
+#location-input {
+    width: calc(100% - 110px);
+    height: 35px;
+    padding: 8px;
+    font-size: 18px;
+    letter-spacing: 2px;
+    outline: none;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    transition: all .5s ease-in-out;
+    background-color: #22a6b3;
+    color: #fff;
+}
+
+#location-input::placeholder {
+    color: rgba(255, 255, 255, .5);
+    font-size: 18px;
+    letter-spacing: 2px;
+    font-weight: 100;
+}
+
+#search-button {
+    width: 80px;
+    height: 35px;
+    font-size: 18px;
+    font-weight: bold;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color .3s;
+    background-color: #007bff;
+}
+
+#search-button:hover {
+    background-color: #0056b3;
+}
+
+/*
+    height: 60%;
+    max-height: 500px;
+*/
